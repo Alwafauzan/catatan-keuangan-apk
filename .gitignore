@@ -1,0 +1,23 @@
+# Binary rilis TIDAK boleh masuk history git.
+#
+# File APK adalah "release asset" di GitHub Releases, bukan isi repo.
+# Yang pushed ke branch hanya disajikan dari raw.githubusercontent.com,
+# sedangkan aplikasi mengunduh dari /releases/latest/download/... -- dua
+# tempat berbeda. Mem-commit APK ke sini tidak membuat update bekerja,
+# hanya menambah ~107 MB permanen di history git.
+#
+# Staging lokal untuk unggah manual lewat Web UI:
+#   apk/1.0.4/*.apk  ->  github.com/Alwafauzan/catatan-keuangan-apk/releases/new
+/apk/
+
+# Berkas lain yang tidak pernah masuk repo
+*.apk
+*.aab
+*.jks
+*.keystore
+*.p12
+*.pem
+*.der
+*.key
+.DS_Store
+Thumbs.db
