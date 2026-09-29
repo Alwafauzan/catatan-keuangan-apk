@@ -12,11 +12,14 @@ Pilih satu sesuai HP kamu. Hampir semua HP sekarang pakai **arm64**.
 
 | Pilihan | Ukuran | Untuk siapa |
 | --- | --- | --- |
-| **[arm64 - 17,6 MB](https://github.com/Alwafauzan/catatan-keuangan-apk/releases/latest/download/catatan-keuangan-arm64-v8a.apk)** | 18.447.324 byte | Xiaomi, Samsung, OPPO, Realme, vivo, Honor, dan sejenisnya. **Paling disarankan.** |
-| **[armv7 - 14,9 MB](https://github.com/Alwafauzan/catatan-keuangan-apk/releases/latest/download/catatan-keuangan-armeabi-v7a.apk)** | 15.675.816 byte | HP lama berprosessor 32-bit |
-| **[Semua HP - 49,8 MB](https://github.com/Alwafauzan/catatan-keuangan-apk/releases/latest/download/catatan-keuangan.apk)** | 52.175.426 byte | Kalau tidak yakin HP kamu yang mana |
+| **[arm64 - 17,7 MB](https://github.com/Alwafauzan/catatan-keuangan-apk/releases/latest/download/catatan-keuangan-arm64-v8a.apk)** | 18.580.020 byte | Xiaomi, Samsung, OPPO, Realme, vivo, Honor, dan sejenisnya. **Paling disarankan.** |
+| **[armv7 - 15,2 MB](https://github.com/Alwafauzan/catatan-keuangan-apk/releases/latest/download/catatan-keuangan-armeabi-v7a.apk)** | 15.923.200 byte | HP lama berprosessor 32-bit |
+| **[Semua HP - 50,3 MB](https://github.com/Alwafauzan/catatan-keuangan-apk/releases/latest/download/catatan-keuangan.apk)** | 52.750.490 byte | Kalau tidak yakin HP kamu yang mana |
 
-Ketiganya sudah **versi 1.0.2**.
+Ketiganya sudah **versi 1.0.4**.
+
+Ada juga `catatan-keuangan-x86_64.apk` (20.129.332 byte) untuk emulator atau
+HP yang benar-benar 32-bit. Jarang perlu — hampir semua HP sekarang sudah arm64.
 
 Halaman semua versi: <https://github.com/Alwafauzan/catatan-keuangan-apk/releases>
 
@@ -47,9 +50,12 @@ Cara paling aman: buka halaman ini langsung di HP yang mau dipakai, lalu ketuk t
 - **Master data** - tambah / edit / hapus akun (bank, e-wallet, tunai) dan kategori
 - **Input AI** - tulis kalimat biasa ("beli cilok 5rb pakai BCA") atau rekam suara,
   lalu form terisi otomatis; tetap bisa kamu cek & ubah sebelum disimpan
+- **Ubah kata sandi** - ganti kata sandi langsung dari dalam aplikasi (versi 1.0.3)
+- **Premium QRIS** - langganan dengan kuota AI tanpa batas, dibayar lewat QRIS yang
+  nominalnya sudah menempel di dalam QR jadi tidak ada salah nominal (versi 1.0.4)
 
 Menu **Input Manual**, **Input AI**, dan **Master Data** tersedia lewat tombol `+`
-di layar utama.
+di layar utama. Tombol **Premium** ada di kanan atas.
 
 ## Update
 
@@ -70,16 +76,20 @@ otomatis mengarahkan ke berkas terbaru.
 ## Verifikasi file (SHA-256)
 
 Untuk memastikan file yang kamu unduh asli dan tidak rusak / diubah di tengah jalan.
-Cocokkan dengan nilai di Google Play:
+Buka halaman [rilis terbaru](https://github.com/Alwafauzan/catatan-keuangan-apk/releases/latest),
+scroll ke bagian `Assets`, lalu cocokkan ukuran file dengan tabel di atas.
+
+Hash versi **1.0.4** (yang sedang diunduh lewat `latest/download`):
 
 ```
-arm64      4b1ce5aef10ca251cae0831f13b20cb0ffd84e129cfacd7449f35ee036d59063
-armv7      29363365e07ca1265d0d6cf5b6ebb3b7e04e4607b0154e03912136be3ef4c1b3
-universal  ff40d298aa55da1ca0648aa44b9ca53bd4b7c0d2d8ca4109e6955ecf13987890
+arm64      45837fa67e7d7ea89433c1f4af790cb53fd0ef7f31d0c5bb82893f1a075c58ef
+armv7      366b32c66835bc600726fa0a3b7b888169a90bb53a3318c93fbcfa357da1541f
+x86_64     d9e6525d55b57ded3980de10c3a9c966b0dcec33041442f8f453082c7dd07d76
+universal  4cde42240900df545df58d2d80807be8ca8cf2d3a498a9bfc9d00c9dd6acd6de
 ```
 
-Di HP, cek di Google Play dengan "APK & Bundle" > ikon tiga titik > "Tampilkan
-checksum", lalu bandingkan dengan kode di atas.
+Aplikasi juga memeriksa hash-nya sendiri sebelum membuka installer, jadi file yang
+salah atau terpotong akan ditolak dengan pesan jelas, bukan dipasang diam-diam.
 
 ## Data & privasi
 
