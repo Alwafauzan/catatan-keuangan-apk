@@ -7,7 +7,9 @@
 # hanya menambah ~107 MB permanen di history git.
 #
 # Staging lokal untuk unggah manual lewat Web UI:
-#   apk/1.0.4/*.apk  ->  github.com/Alwafauzan/catatan-keuangan-apk/releases/new
+#   apk/<versi>/*.apk  ->  github.com/Alwafauzan/catatan-keuangan-apk/releases/new
+# (/apk/ menutup SEMUA subfolder versi, jadi tidak perlu menambah baris baru
+#  tiap rilis. Tapi kalau baris ini dihapus, 1.0.5 = 114 MB langsung ikut history.)
 /apk/
 
 # Berkas lain yang tidak pernah masuk repo
